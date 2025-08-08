@@ -1,4 +1,3 @@
-import logger
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -163,7 +162,7 @@ def list_courses(request):
             from .lightweight_mapper import LightweightCourseMapper
             mapper = LightweightCourseMapper()
         else:
-            from .embedding_course_mapper import EmbeddingCourseMapper
+            from .course_mapper import EmbeddingCourseMapper
             mapper = EmbeddingCourseMapper()
 
         courses = []
